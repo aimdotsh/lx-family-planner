@@ -261,13 +261,13 @@ const APP_SECRET =
   'lx-family-development-secret-change-me';
 const ENCRYPTION_KEY = createHash('sha256').update(APP_SECRET).digest();
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
-const SUPPORTED_APP_LANGUAGES = ['de', 'en', 'fr', 'es', 'it', 'nl', 'pl'];
+const SUPPORTED_APP_LANGUAGES = ['de', 'en', 'fr', 'es', 'it', 'nl', 'pl', 'zh'];
 const APP_LANGUAGE = (() => {
   const configured = String(process.env.APP_LANGUAGE || '')
     .trim()
     .toLowerCase()
     .slice(0, 2);
-  return SUPPORTED_APP_LANGUAGES.includes(configured) ? configured : 'de';
+  return SUPPORTED_APP_LANGUAGES.includes(configured) ? configured : 'zh';
 })();
 const appTranslators = Object.fromEntries(
   SUPPORTED_APP_LANGUAGES.map(language => [

@@ -3,8 +3,8 @@ import { initReactI18next } from 'react-i18next';
 import { plannerApiFetch } from '../utils/apiConfig.js';
 import { resources } from './resources.js';
 
-export const SUPPORTED_LANGUAGES = ['de', 'en', 'fr', 'es', 'it', 'nl', 'pl'];
-export const DEFAULT_LANGUAGE = 'de';
+export const SUPPORTED_LANGUAGES = ['de', 'en', 'fr', 'es', 'it', 'nl', 'pl', 'zh'];
+export const DEFAULT_LANGUAGE = 'zh';
 const LANGUAGE_STORAGE_KEY = 'lx_family_language';
 
 export function normalizeLanguage(value) {
